@@ -1,148 +1,112 @@
-
-
-\documentclass[a4paper, 11pt]{article}
-
-
-
-\usepackage[margin=1in]{geometry}
-\usepackage{setspace}\onehalfspacing
-\usepackage{microtype}
-
-\usepackage{amsmath} \allowdisplaybreaks
-\usepackage{amssymb}
-\usepackage{amsthm} \theoremstyle{definition}
-\newtheorem{theorem}{Theorem}
-\newtheorem{lemma}{Lemma}
-\newtheorem{assumption}{Assumption}
-\newtheorem{proposition}{Proposition}
-\newtheorem{definition}{Definition}
-
-
+\documentclass{article}
+\usepackage{amsmath}
 \usepackage{natbib}
-\usepackage{bibentry}
 
-
-\usepackage{booktabs}
-\usepackage{graphicx}
-\usepackage{appendix}
-
-
-
-\usepackage[hyphens]{url}
-\usepackage[bookmarks=false,hidelinks]{hyperref}
-
-
-
-\usepackage{tikz}
-\usepackage{pgfplots}
-\usetikzlibrary{positioning}
-\usetikzlibrary{arrows,shapes}
-\usetikzlibrary{snakes}
-
-\usepackage{authblk}
-\renewcommand\Authfont{\rm\large}
-\renewcommand\Affilfont{\rm\scriptsize}
-\setlength{\affilsep}{0.2em}
-
-\usepackage[shortlabels]{enumitem}
-
-%%%%%%%%%%%%%% MACRO %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\email}[1]{{\href{mailto:#1}{\nolinkurl{#1}}}}
-
-\usepackage{bm}
-\renewcommand{\vec}[1]{\boldsymbol{\mathbf{#1}}}
-\newcommand{\mat}[1]{\vec{#1}}
-\newcommand{\set}[1]{\boldsymbol{\mathbf{#1}}}
-\newcommand{\optset}[1]{\mathbb{#1}}
-
-\usepackage{xcolor}
-\newcommand{\note}[1]{{\Large\bf#1}}
-\newcommand{\bluenote}[1]{{\Large\color{blue}#1}}
-\newcommand{\rednote}[1]{{\Large\color{red}#1}}
-\newcommand{\ck}[1]{{\sf\color{red}#1 --Chang}}
-
-
-\usepackage{etoolbox}
-% To use, for example, \Ac for \mathcal{A}.  Requires "etoolbox" package
-\makeatletter
-\def\do#1{\@namedef{#1c}{\ensuremath{\mathcal{#1}}}}
-\docsvlist{A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z}
-\makeatother
-
-\def\Eb{\mathbb{E}}
-\def\Rb{\mathbb{R}}
-%\def\response{[$\Longrightarrow$]}
-
-\newenvironment{response}
-{ [$\Longrightarrow$]\sf }
-{ \hfill \rule{1ex}{1ex} }
-
-\newcommand{\ds}{\mathop{}\!\mathrm{d}s}
-\newcommand{\dx}{\mathop{}\!\mathrm{d}x}
-\newcommand{\dy}{\mathop{}\!\mathrm{d}y}
-\newcommand{\dz}{\mathop{}\!\mathrm{d}z}
-\newcommand{\dt}{\mathop{}\!\mathrm{d}t}
-\DeclareMathOperator{\ord}{ord}
-
-\renewcommand{\bar}[1]{\mkern 1.5mu\overline{\mkern-1.5mu#1\mkern-1.5mu}\mkern 1.5mu}
-\renewcommand{\hat}{\widehat}
-\renewcommand{\tilde}{\widetilde}
-
-\newcommand{\sumij}{\sum_{(i,j)\in\Ac}}
-\newcommand{\sumji}{\sum_{(j,i)\in\Ac}}
-\newcommand{\sums}{\sum_{s\in\Sc}}
-
-\DeclareMathOperator*{\minimize}{minimize}
-\DeclareMathOperator*{\maximize}{maximize}
-\DeclareMathOperator*{\argmax}{\arg \max}
-\DeclareMathOperator*{\argmin}{\arg \min}
-\DeclareMathOperator*{\conv}{conv}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
-\title{......}
-\author[$\dag$]{Your Name}
-\author[$\ddag$]{Collaborator Name}
-\author[$\dag$]{Changhyun Kwon\thanks{Corresponding author: \email{chkwon@kaist.ac.kr}}}
-\affil[$\dag$]{Department of Industrial and Systems Engineering, KAIST, Daejeon, 34141, Republic of Korea}
-\affil[$\ddag$]{Department of XXXXX, University of YYYY, City, State, Zip, Country}
+\title{A Study of Some Things in Computer Science}
+\author{John Smith}
 \date{\today}
-
-%\usepackage{showlabels} 
-%\usepackage[final]{showlabels}
-
 
 \begin{document}
 \maketitle
-\nobibliography*
-%\bibentry{...}
 
+\begin{abstract}
+In this paper, we present a new algorithm. It is really good and works well. We use ML to solve the problem. The results show that our method is better than other methods. This paper is organized as follows. Section 1 introduces the problem. Section 2 describes the method. Section 3 shows results.
+\end{abstract}
 
+\section{Introduction}
 
+There are many problems in computer science that are hard to solve. It is important to study these problems. In this paper, we study one of these problems. The problem is basically about optimization.\\
 
-\bibliographystyle{apalike}
-\bibliography{library}
+A lot of researchers have worked on this problem before. 
+Smith et al. \cite{smith2020} proposed a method. 
+It was somewhat good. Jones \cite{jones2019} also worked on this. 
+Their method was fairly effective but it had some issues.\\
 
+Our contributions are as follows:
+\begin{itemize}
+\item We propose a new algorithm
+\item It is faster than previous methods
+\item We do experiments
+\end{itemize}
 
+The rest of this paper is organized as follows. In Section 2, we describe related work. In Section 3, we present our method. In Section 4, we show experimental results. Finally, in Section 5, we conclude.
 
-\newpage
-\renewcommand{\appendixpagename}{Appendix}
+\section{Related Work}
 
-\appendix
-\appendixpage
+\citet{smith2020,jones2019,brown2018,wilson2017} have studied this problem. The approach in \cite{smith2020} uses neural networks. It achieves good results on benchmark datasets.
 
+As shown in Table 1, previous methods have various performance levels. Figure 1 shows the comparison.
 
+\begin{table}[h]
+\centering
+\caption{Comparison of methods}
+\begin{tabular}{c c c}
+\hline
+Method & Accuracy & Time \\
+\hline
+Smith & 85.2 & 120 \\
+Jones & 87.1 & 95 \\
+Ours & 92.3 & 45 \\
+\hline
+\end{tabular}
+\end{table}
+
+\section{Method}
+
+In this section, we describe our method. It is based on deep learning. The algorithm works as follows.
+
+First, we compute the features. Then we classify them. We use a neural network for this. The network has several layers.
+
+Let $counter_1$ be the number of iterations. We define $total\_cost = \sum cost_i$. The optimization problem is:
+\begin{align}
+\min & \sum_{i=1}^{N} x_i \\
+s.t. & \sum_{j=1}^{M} y_j \leq B \\
+& x_i \geq 0, \forall i \\
+\end{align}
+
+The solution is found using Algorithm 1.
+
+\subsection{Implementation Details}
+
+We implemented our method in Python. It uses PyTorch for the neural network. The experiments were run on a GPU. Training took about 2 hours.
+
+"The learning rate was set to 0.001" as recommended by previous work. We used the Adam optimizer. The batch size was 32.
+
+\section{Experiments}
+
+We evaluate our method on several datasets. The results are shown in Table \ref{tab:results}. As we can see, our method achieves the best performance.
+
+\begin{table}[h]
+\caption{Experimental results}
+\label{tab:results}
+\centering
+\begin{tabular}{c c c c}
+\hline
+Dataset & Baseline & Previous SOTA & Ours \\
+\hline
+MNIST & 98.1 & 99.2 & 99.5 \\
+CIFAR & 75.3 & 82.1 & 85.7 \\
+ImageNet & 70.2 & 78.9 & 82.3 \\
+\hline
+\end{tabular}
+\end{table}
+
+It can be seen from the results that our method is better. The improvement is significant. This proves that our approach is correct.
+
+In figure 2, we show the training curves. The loss decreases over time. This shows that the model is learning.
+
+We also did ablation studies. Removing component A decreased performance by 5\%. Removing component B decreased it by 3\%. This shows that both components are important.
+
+\section{Conclusion}
+
+In this paper, we presented a new algorithm for solving an important problem. It is really effective and achieves state-of-the-art results. Our method is faster and more accurate than previous methods.
+
+In future work, we will extend our method to other domains. We will also try to improve the efficiency further. There are many interesting directions to explore.
+
+\section*{Acknowledgement}
+We thank the reviewers for their comments.
+
+\bibliographystyle{plain}
+\bibliography{references}
 
 \end{document}
-
-
-
-
-
-
-
-%
-
